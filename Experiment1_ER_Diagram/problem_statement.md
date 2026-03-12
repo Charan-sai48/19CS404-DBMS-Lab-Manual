@@ -71,24 +71,28 @@ The Central Library wants to manage book lending and cultural events.
 
 | Entity | Attributes (PK, FK) | Notes |
 |--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
+|Member|Member_ID (PK), Name, Email, Phone|Library members|
+|Book|Book_ID (PK), Title, Author, Category|Each book has category (Fiction, etc.)|
+|Loan|Loan_ID (PK), Book_ID (FK), Member_ID (FK), Loan_Date, Return_Date|Tracks borrowing details|
+|Event|Event_ID (PK), Title, Date, Time|Cultural events organized by library|
+|Speaker|Speaker_ID (PK), Name, Expertise|Authors or guest speakers|  
 ### Relationships and Constraints
 
 | Relationship | Cardinality | Participation | Notes |
 |--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+|Member–Loan (Borrows)|1:M|Total|Each member can borrow many books|
+|Book–Loan|1:M|Total|A book can appear in many loan records|
+|Member–Event (Registers)|M:N|Partial|Members can register for events|
+|Event–Speaker|M:N|Total|Each event must have at least one speaker|
 
 ### Assumptions
-- 
-- 
-- 
+- Each event must take place in one room.
+
+- Multiple speakers can be assigned to one event.
+
+- Fine is applied only if return date > due date.
+
+---
 
 ---
 
