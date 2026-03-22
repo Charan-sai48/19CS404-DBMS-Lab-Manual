@@ -47,10 +47,14 @@ SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
 --
--- Paste Question 1 here
+Write a SQL statement to Update the grade of all customers in Chennai city as  5. 
+
+Customer table (customer_id,cust_name,city,grade,salesman_id)
 
 ```sql
--- Paste your SQL code below for Question 1
+UPDATE Customer
+SET grade =5
+WHERE city='Chennai';
 ```
 
 **Output:**
@@ -59,10 +63,25 @@ SELECT column1, column2 FROM table_name WHERE condition;
 
 **Question 2**
 ---
--- Paste Question 2 here
+Write a SQL query to reduce the reorder level by 30% where cost price is more than 50 and quantity in stock is less than 100 in the products table.
+
+Products Table 
+
+name          type       
+----------    ---------- 
+product_id     INT PRIMARY KEY        
+product_name   VARCHAR(10) 
+category       VARCHAR(50) 
+cost_price     DECIMAL(10) 
+sell_price     DECIMAL(10) 
+reorder_lvl    INT        
+quantity       INT        
+supplier_id    INT 
 
 ```sql
--- Paste your SQL code below for Question 2
+UPDATE products
+SET reorder_lvl=(0.7*reorder_lvl)
+WHERE cost_price>50 AND quantity<100;
 ```
 
 **Output:**
@@ -71,10 +90,25 @@ SELECT column1, column2 FROM table_name WHERE condition;
 
 **Question 3**
 ---
--- Paste Question 3 here
+Update the 'Selling_Price' to add 10% extra margin for all products supplied by the supplier with id 6.
+
+PRODUCTS TABLE
+
+name               type
+-----------------  ---------------
+product_id         INT
+product_name       VARCHAR(100)
+category           VARCHAR(50)
+cost_price         DECIMAL(10,2)
+sell_price         DECIMAL(10,2)
+reorder_lvl        INT
+quantity           INT
+supplier_id        INT
 
 ```sql
--- Paste your SQL code below for Question 3
+UPDATE PRODUCTS
+SET sell_price=ROUND(1.1*sell_price)
+WHERE supplier_id=6;
 ```
 
 **Output:**
@@ -83,10 +117,13 @@ SELECT column1, column2 FROM table_name WHERE condition;
 
 **Question 4**
 ---
--- Paste Question 4 here
+Write a SQL query to remove rows from the table 'customer' with the following condition -
+
+1. 'cust_city' should begin with the letter 'L',
 
 ```sql
--- Paste your SQL code below for Question 4
+DELETE FROM Customer
+WHERE CUST_CITY LIKE 'L%';
 ```
 
 **Output:**
@@ -95,10 +132,13 @@ SELECT column1, column2 FROM table_name WHERE condition;
 
 **Question 5**
 ---
--- Paste Question 5 here
+Write a SQL query to Delete All Doctors with a NULL Specialization
+Sample table: Doctors
+attributes : doctor_id, first_name, last_name, specialization
 
 ```sql
--- Paste your SQL code below for Question 5
+DELETE FROM Doctors
+WHERE specialization IS Null;
 ```
 
 **Output:**
@@ -107,10 +147,11 @@ SELECT column1, column2 FROM table_name WHERE condition;
 
 **Question 6**
 ---
--- Paste Question 6 here
+Write a SQL query to Delete customers from 'customer' table where 'WORKING_AREA' is 'New York'.
 
 ```sql
--- Paste your SQL code below for Question 6
+DELETE FROM Customer
+WHERE WORKING_AREA='New York';
 ```
 
 **Output:**
@@ -119,10 +160,12 @@ SELECT column1, column2 FROM table_name WHERE condition;
 
 **Question 7**
 ---
--- Paste Question 7 here
+Write a query to Select all the records from the EmployeeInfo table, where the departments are either HR or Account.
 
 ```sql
--- Paste your SQL code below for Question 7
+SELECT *
+FROM Employeeinfo
+WHERE Department IN ('HR','Account');
 ```
 
 **Output:**
@@ -131,10 +174,23 @@ SELECT column1, column2 FROM table_name WHERE condition;
 
 **Question 8**
 ---
--- Paste Question 8 here
+Write a SQL statement to Display the order number, orderdate and the purchase amount of
+orders table which will be delivered by the salesman with ID 5001.
+
+orders table
+
+name                 type
+---------------     ---------------
+order_no            int
+purch_amt         real
+order_date        text
+customer_id      int
+salesman_id      int
 
 ```sql
--- Paste your SQL code below for Question 8
+SELECT order_no,order_date,purch_amt
+FROM orders
+WHERE salesman_id=5001;
 ```
 
 **Output:**
@@ -143,10 +199,16 @@ SELECT column1, column2 FROM table_name WHERE condition;
 
 **Question 9**
 ---
--- Paste Question 9 here
+Write a SQL query to categorize decimal as 'High', 'Medium', or 'Low' based on whether it is greater than 100, between 50 and 100, or less than 50 in the Calculations table
 
 ```sql
--- Paste your SQL code below for Question 9
+SELECT id, decimal,
+    CASE
+        WHEN decimal >100 THEN 'High'
+        WHEN decimal BETWEEN 50 AND 100 THEN 'Medium'
+        ELSE 'Low'
+    END AS category
+FROM Calculations;
 ```
 
 **Output:**
@@ -155,10 +217,12 @@ SELECT column1, column2 FROM table_name WHERE condition;
 
 **Question 10**
 ---
--- Paste Question 10 here
+write a SQL query to find customers who are either from the city 'New York' or who do not have a grade greater than 100. Return customer_id, cust_name, city, grade, and salesman_id.
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT customer_id,cust_name,city,grade,salesman_id
+FROM customer
+WHERE city='New York' OR grade<=100;
 ```
 
 **Output:**
