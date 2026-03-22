@@ -67,16 +67,6 @@ Write a SQL query to reduce the reorder level by 30% where cost price is more th
 
 Products Table 
 
-name          type       
-----------    ---------- 
-product_id     INT PRIMARY KEY        
-product_name   VARCHAR(10) 
-category       VARCHAR(50) 
-cost_price     DECIMAL(10) 
-sell_price     DECIMAL(10) 
-reorder_lvl    INT        
-quantity       INT        
-supplier_id    INT 
 
 ```sql
 UPDATE products
@@ -94,16 +84,6 @@ Update the 'Selling_Price' to add 10% extra margin for all products supplied by 
 
 PRODUCTS TABLE
 
-name               type
------------------  ---------------
-product_id         INT
-product_name       VARCHAR(100)
-category           VARCHAR(50)
-cost_price         DECIMAL(10,2)
-sell_price         DECIMAL(10,2)
-reorder_lvl        INT
-quantity           INT
-supplier_id        INT
 
 ```sql
 UPDATE PRODUCTS
