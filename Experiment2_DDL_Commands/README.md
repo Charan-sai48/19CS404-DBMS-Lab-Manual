@@ -105,10 +105,11 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+Insert a student with RollNo 201, Name David Lee, Gender M, Subject Physics, and MARKS 92 into the Student_details table.
 
 ```sql
--- Paste your SQL code below for Question 1
+INSERT INTO Student_details
+VALUES(201,'David Lee','M','Physics',92);
 ```
 
 **Output:**
@@ -117,10 +118,24 @@ CREATE TABLE Table_Name (
 
 **Question 2**
 ---
--- Paste Question 2 here
+-- Paste Question 2 hereCreate a table named Employees with the following constraints:
 
+EmployeeID should be the primary key.
+FirstName and LastName should be NOT NULL.
+Email should be unique.
+Salary should be greater than 0.
+DepartmentID should be a foreign key referencing the Departments table.
+For example:
 ```sql
--- Paste your SQL code below for Question 2
+CREATE TABLE Employees(
+     EmployeeID INT PRIMARY KEY,
+     FirstName TEXT NOT NULL,
+     LastName TEXT NOT NULL,
+     Email VARCHAR(30) UNIQUE,
+     Salary INT CHECK(Salary>0),
+     DepartmentID INTEGER,
+     FOREIGN KEY(DepartmentID) REFERENCES Departments(DepartmentID)
+);
 ```
 
 **Output:**
@@ -129,10 +144,20 @@ CREATE TABLE Table_Name (
 
 **Question 3**
 ---
--- Paste Question 3 here
+Create a table named Products with the following columns:
+
+ProductID as INTEGER
+ProductName as TEXT
+Price as REAL
+Stock as INTEGER
 
 ```sql
--- Paste your SQL code below for Question 3
+CREATE TABLE Products(
+    ProductID INTEGER,
+    ProductName TEXT,
+    Price REAL,
+    Stock INTEGER
+);
 ```
 
 **Output:**
@@ -141,10 +166,20 @@ CREATE TABLE Table_Name (
 
 **Question 4**
 ---
--- Paste Question 4 here
+Create a table named Invoices with the following constraints:
+
+InvoiceID as INTEGER should be the primary key.
+InvoiceDate as DATE.
+DueDate as DATE should be greater than the InvoiceDate.
+Amount as REAL should be greater than 0.
 
 ```sql
--- Paste your SQL code below for Question 4
+CREATE TABLE Invoices(
+     InvoiceID INTEGER PRIMARY KEY,
+     InvoiceDate DATE,
+     DueDate DATE CHECK(DueDate>InvoiceDate),
+     Amount REAL CHECK (Amount>0)
+);
 ```
 
 **Output:**
@@ -153,10 +188,17 @@ CREATE TABLE Table_Name (
 
 **Question 5**
 ---
--- Paste Question 5 here
+Insert the following customers into the Customers table:
+
+CustomerID  Name         Address     City        ZipCode
+----------  -----------  ----------  ----------  ----------
+302         Laura Croft  456 Elm St  Seattle     98101
+303         Bruce Wayne  789 Oak St  Gotham      10001
 
 ```sql
--- Paste your SQL code below for Question 5
+INSERT INTO Customers
+VALUES (302,'Laura Croft','456 Elm St','Seattle',98101),
+       (303,'Bruce Wayne','789 Oak St','Gotham',10001);
 ```
 
 **Output:**
@@ -165,10 +207,19 @@ CREATE TABLE Table_Name (
 
 **Question 6**
 ---
--- Paste Question 6 here
+Write a SQL Query  to change the name of attribute "name" to "first_name"  and add mobilenumber as number ,DOB as Date in the table Companies. 
+
+
 
 ```sql
--- Paste your SQL code below for Question 6
+TABLE Companies
+RENAME COLUMN name TO first_name;
+
+ALTER TABLE Companies
+ADD COLUMN mobilenumb number;
+
+ALTER TABLE Companies
+ADD COLUMN DOB Date;
 ```
 
 **Output:**
@@ -177,10 +228,12 @@ CREATE TABLE Table_Name (
 
 **Question 7**
 ---
--- Paste Question 7 here
+Write a SQL query to modify the Student_details table by adding a new column Email of type VARCHAR(50) and updating the column MARKS to have a default value of 0.n 7 here
 
 ```sql
--- Paste your SQL code below for Question 7
+ALTER TABLE Student_details
+ADD COLUMN Email varchar(50)
+ALTER COLUMN MARKS SET DEFAULT 0;
 ```
 
 **Output:**
@@ -189,10 +242,15 @@ CREATE TABLE Table_Name (
 
 **Question 8**
 ---
--- Paste Question 8 here
+Insert all employees from Former_employees into Employee
+
+Table attributes are EmployeeID, Name, Department, Salary
+
 
 ```sql
--- Paste your SQL code below for Question 8
+INSERT INTO Employee(EmployeeID,Name,Department,Salary)
+SELECT EmployeeID,Name,Department,Salary
+FROM Former_employees;
 ```
 
 **Output:**
@@ -201,10 +259,21 @@ CREATE TABLE Table_Name (
 
 **Question 9**
 ---
--- Paste Question 9 here
+Create a table named ProjectAssignments with the following constraints:
+AssignmentID as INTEGER should be the primary key.
+EmployeeID as INTEGER should be a foreign key referencing Employees(EmployeeID).
+ProjectID as INTEGER should be a foreign key referencing Projects(ProjectID).
+AssignmentDate as DATE should be NOT NULL.
 
 ```sql
--- Paste your SQL code below for Question 9
+CREATE TABLE ProjectAssignments(
+     AssignmentID INTEGER PRIMARY KEY,
+     EmployeeID INTEGER,
+     ProjectID INTEGER,
+     AssignmentDate DATE NOT NULL,
+     FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID),
+     FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID)
+);
 ```
 
 **Output:**
@@ -213,10 +282,25 @@ CREATE TABLE Table_Name (
 
 **Question 10**
 ---
--- Paste Question 10 here
+Create a new table named orders with the following specifications:
+ord_id as TEXT with a length of 4.
+item_id as TEXT.
+ord_date as DATE.
+ord_qty as INTEGER.
+cost as INTEGER.
+The primary key is a composite key consisting of item_id and ord_date.
+ord_id and item_id should not accept NULL
 
 ```sql
--- Paste your SQL code below for Question 10
+CREATE TABLE orders (
+      ord_id TEXT NOT NULL CHECK(LENGTH(ord_id)=4),
+      item_id TEXT NOT NULL,
+      ord_date DATE,
+      ord_qty INTEGER,
+      cost INTEGER,
+      PRIMARY KEY(item_id,ord_date)
+);
+
 ```
 
 **Output:**
