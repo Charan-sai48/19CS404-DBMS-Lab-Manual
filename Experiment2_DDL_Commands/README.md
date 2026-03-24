@@ -114,7 +114,8 @@ VALUES(201,'David Lee','M','Physics',92);
 
 **Output:**
 
-![Output1](output.png)
+<img width="1233" height="320" alt="image" src="https://github.com/user-attachments/assets/4f2f6d5d-43b9-454c-88bb-a9dfa2a86e65" />
+
 
 **Question 2**
 ---
@@ -140,7 +141,8 @@ CREATE TABLE Employees(
 
 **Output:**
 
-![Output2](output.png)
+<img width="1232" height="508" alt="image" src="https://github.com/user-attachments/assets/bf5709b9-701b-4ecb-b748-e7fefca67b33" />
+
 
 **Question 3**
 ---
@@ -162,7 +164,8 @@ CREATE TABLE Products(
 
 **Output:**
 
-![Output3](output.png)
+<img width="1234" height="396" alt="image" src="https://github.com/user-attachments/assets/cb79ac12-9e58-4b22-ae57-7e1baee726ae" />
+
 
 **Question 4**
 ---
@@ -184,7 +187,8 @@ CREATE TABLE Invoices(
 
 **Output:**
 
-![Output4](output.png)
+<img width="1234" height="375" alt="image" src="https://github.com/user-attachments/assets/3f0d816e-13bc-4319-8521-ed9d18536b94" />
+
 
 **Question 5**
 ---
@@ -203,7 +207,8 @@ VALUES (302,'Laura Croft','456 Elm St','Seattle',98101),
 
 **Output:**
 
-![Output5](output.png)
+<img width="1219" height="468" alt="image" src="https://github.com/user-attachments/assets/39073de6-dcd3-4904-930c-7df4e8e2cf57" />
+
 
 **Question 6**
 ---
@@ -224,7 +229,8 @@ ADD COLUMN DOB Date;
 
 **Output:**
 
-![Output6](output.png)
+<img width="1229" height="480" alt="image" src="https://github.com/user-attachments/assets/5f7ae487-f64b-45fe-86e2-f84c30e2828f" />
+
 
 **Question 7**
 ---
@@ -255,7 +261,8 @@ FROM Former_employees;
 
 **Output:**
 
-![Output8](output.png)
+<img width="1240" height="378" alt="image" src="https://github.com/user-attachments/assets/1975d082-6cf9-44aa-b3b6-c8786f37d1d2" />
+
 
 **Question 9**
 ---
@@ -278,7 +285,8 @@ CREATE TABLE ProjectAssignments(
 
 **Output:**
 
-![Output9](output.png)
+<img width="1242" height="387" alt="image" src="https://github.com/user-attachments/assets/f2862b20-efd3-4015-8943-74d29c41ced7" />
+
 
 **Question 10**
 ---
@@ -305,7 +313,8 @@ CREATE TABLE orders (
 
 **Output:**
 
-![Output10](output.png)
+<img width="1247" height="413" alt="image" src="https://github.com/user-attachments/assets/2d0438f1-fd24-479f-8459-bb5c50fc337c" />
+
 
 
 ## RESULT
