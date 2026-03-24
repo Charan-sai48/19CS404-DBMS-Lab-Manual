@@ -59,7 +59,8 @@ WHERE city='Chennai';
 
 **Output:**
 
-![Output1](output.png)
+<img width="1228" height="568" alt="image" src="https://github.com/user-attachments/assets/a912a073-c60a-493b-a5f2-bbcb1159d083" />
+
 
 **Question 2**
 ---
@@ -76,7 +77,8 @@ WHERE cost_price>50 AND quantity<100;
 
 **Output:**
 
-![Output2](output.png)
+<img width="1234" height="542" alt="image" src="https://github.com/user-attachments/assets/9baf474e-05e2-45e8-8602-69e7a9252400" />
+
 
 **Question 3**
 ---
@@ -93,7 +95,8 @@ WHERE supplier_id=6;
 
 **Output:**
 
-![Output3](output.png)
+<img width="1237" height="630" alt="image" src="https://github.com/user-attachments/assets/e787da4d-882e-4857-b6e5-2a38c04e64ad" />
+
 
 **Question 4**
 ---
@@ -108,7 +111,8 @@ WHERE CUST_CITY LIKE 'L%';
 
 **Output:**
 
-![Output4](output.png)
+<img width="1213" height="879" alt="image" src="https://github.com/user-attachments/assets/f24bc098-8ea6-470c-9577-ae32ba7f728c" />
+
 
 **Question 5**
 ---
@@ -123,7 +127,8 @@ WHERE specialization IS Null;
 
 **Output:**
 
-![Output5](output.png)
+<img width="1229" height="944" alt="image" src="https://github.com/user-attachments/assets/7dfdd053-3f2a-4c3a-99e4-eab973cf7992" />
+
 
 **Question 6**
 ---
@@ -136,7 +141,8 @@ WHERE WORKING_AREA='New York';
 
 **Output:**
 
-![Output6](output.png)
+<img width="1222" height="825" alt="image" src="https://github.com/user-attachments/assets/6cece693-0633-44bc-ade1-e3e1eefc6b6a" />
+
 
 **Question 7**
 ---
@@ -149,8 +155,7 @@ WHERE Department IN ('HR','Account');
 ```
 
 **Output:**
-
-![Output7](output.png)
+<img width="1233" height="368" alt="image" src="https://github.com/user-attachments/assets/181d500c-aca3-492d-be39-7afa7b5b7fbb" />
 
 **Question 8**
 ---
@@ -175,7 +180,8 @@ WHERE salesman_id=5001;
 
 **Output:**
 
-![Output8](output.png)
+<img width="1049" height="492" alt="image" src="https://github.com/user-attachments/assets/1ed25a19-36ca-4b18-bbb7-4f8bb7fcd27d" />
+
 
 **Question 9**
 ---
@@ -193,7 +199,8 @@ FROM Calculations;
 
 **Output:**
 
-![Output9](output.png)
+<img width="849" height="544" alt="image" src="https://github.com/user-attachments/assets/747eb82c-0e3e-4a03-b37b-f089640c9691" />
+
 
 **Question 10**
 ---
@@ -207,7 +214,8 @@ WHERE city='New York' OR grade<=100;
 
 **Output:**
 
-![Output10](output.png)
+<img width="1233" height="528" alt="image" src="https://github.com/user-attachments/assets/4945c81d-5fec-41b4-acde-065213cf331b" />
+
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
