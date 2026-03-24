@@ -38,34 +38,61 @@ DROP VIEW view_name;
 
 **Question 1**
 --
--- Paste Question 1 here
+Write a SQL query to Retrieve the medications with dosages equal to the highest dosage
+
+Table Name: Medications (attributes: medication_id, medication_name, dosage)
 
 ```sql
--- Paste your SQL code below for Question 1
+SELECT medication_id,
+       medication_name,
+       dosage
+FROM Medications
+WHERE dosage = (
+    SELECT MAX(dosage)
+    FROM Medications
+);
 ```
 
 **Output:**
+<img width="899" height="489" alt="image" src="https://github.com/user-attachments/assets/f5130183-e920-4066-a7c9-6af1a566b193" />
 
-![Output1](output.png)
 
 **Question 2**
 ---
--- Paste Question 2 here
+Write a SQL query to Retrieve the names and cities of customers who have the same city as customers with IDs 3 and 7
+
+SAMPLE TABLE: customer
 
 ```sql
--- Paste your SQL code below for Question 2
+SELECT name,
+       city
+FROM customer
+WHERE city IN (
+    SELECT city
+    FROM customer
+    WHERE id IN (3, 7)
+);
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="896" height="539" alt="image" src="https://github.com/user-attachments/assets/ebc8cc08-3faa-49d1-8a1c-6f11229e11a8" />
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+From the following tables, write a SQL query to find all the orders generated in New York city. Return ord_no, purch_amt, ord_date, customer_id and salesman_id.
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT o.ord_no,
+       o.purch_amt,
+       o.ord_date,
+       o.customer_id,
+       o.salesman_id
+FROM orders o
+JOIN salesman s
+  ON o.salesman_id = s.salesman_id
+WHERE s.city = 'New York';
 ```
 
 **Output:**
@@ -74,10 +101,22 @@ DROP VIEW view_name;
 
 **Question 4**
 ---
--- Paste Question 4 here
+Write a SQL query to Identify customers whose city is different from the city of the customer with the highest ID
+
+SAMPLE TABLE: customer
 
 ```sql
--- Paste your SQL code below for Question 4
+SELECT id,
+       name,
+       city,
+       email,
+       phone
+FROM customer
+WHERE city <> (
+    SELECT city
+    FROM customer
+    WHERE id = (SELECT MAX(id) FROM customer)
+);
 ```
 
 **Output:**
@@ -86,10 +125,22 @@ DROP VIEW view_name;
 
 **Question 5**
 ---
--- Paste Question 5 here
+Write a SQL query to Find employees who have an age less than the average age of employees with incomes over 1 million
+
+Employee Table
 
 ```sql
--- Paste your SQL code below for Question 5
+SELECT id,
+       name,
+       age,
+       city,
+       income
+FROM Employee
+WHERE age < (
+    SELECT AVG(age)
+    FROM Employee
+    WHERE income > 1000000
+);
 ```
 
 **Output:**
@@ -98,10 +149,22 @@ DROP VIEW view_name;
 
 **Question 6**
 ---
--- Paste Question 6 here
+Write a SQL query to Find employees who have an age less than the average age of employees with incomes over 2.5 Lakh
+
+Employee Table
 
 ```sql
--- Paste your SQL code below for Question 6
+SELECT id,
+       name,
+       age,
+       city,
+       income
+FROM Employee
+WHERE age < (
+    SELECT AVG(age)
+    FROM Employee
+    WHERE income > 250000
+);
 ```
 
 **Output:**
